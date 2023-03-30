@@ -1,10 +1,7 @@
 package Managers;
 
-import PageObjects.HomePage;
-import PageObjects.LoginPage;
+import PageObjects.*;
 import org.openqa.selenium.WebDriver;
-import PageObjects.ProductDetailPage;
-import PageObjects.ProductListPage;
 
 public class PageObjectManager {
 
@@ -13,6 +10,7 @@ public class PageObjectManager {
     private LoginPage loginPage;
     private ProductListPage productListPage;
     private ProductDetailPage productDetailPage;
+    private CoronaPage coronaPage;
 
     public PageObjectManager(WebDriver webDriver) {
         this.webDriver = webDriver;
@@ -39,5 +37,12 @@ public class PageObjectManager {
     public ProductDetailPage getProductDetailPage() {
         if (productDetailPage == null) productDetailPage = new ProductDetailPage(webDriver);
         return productDetailPage;
+    }
+    public CoronaPage getCoronaPage() {
+
+        if (coronaPage == null) {
+            coronaPage = new CoronaPage(webDriver);
+        }
+        return coronaPage;
     }
 }

@@ -36,6 +36,6 @@ public class Hooks {
                 System.err.println(noSupportScreenshot.getMessage());
             }
         }
-        testContext.getDriverManager().closeDriver();
+        //testContext.getDriverManager().closeDriver();
     }
 }
